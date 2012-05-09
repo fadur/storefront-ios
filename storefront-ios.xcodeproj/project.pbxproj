@@ -14,12 +14,11 @@
 		BA0E1D6F15540F7000C48777 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0E1D6E15540F7000C48777 /* main.m */; };
 		BA0E1D7315540F7000C48777 /* UNIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0E1D7215540F7000C48777 /* UNIAppDelegate.m */; };
 		BA0E1D7615540F7000C48777 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA0E1D7415540F7000C48777 /* MainStoryboard.storyboard */; };
-		BA0E1D7915540F7000C48777 /* UNIFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0E1D7815540F7000C48777 /* UNIFirstViewController.m */; };
-		BA0E1D7B15540F7000C48777 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = BA0E1D7A15540F7000C48777 /* first.png */; };
-		BA0E1D7D15540F7000C48777 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA0E1D7C15540F7000C48777 /* first@2x.png */; };
-		BA0E1D8015540F7000C48777 /* UNISecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0E1D7F15540F7000C48777 /* UNISecondViewController.m */; };
-		BA0E1D8215540F7000C48777 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = BA0E1D8115540F7000C48777 /* second.png */; };
-		BA0E1D8415540F7000C48777 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA0E1D8315540F7000C48777 /* second@2x.png */; };
+		BA0E1D8C1554102500C48777 /* UNIBootsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0E1D8B1554102500C48777 /* UNIBootsViewController.m */; };
+		BA0E1D931554198600C48777 /* Products.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0E1D901554198600C48777 /* Products.m */; };
+		BA0E1D941554198600C48777 /* UNIItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0E1D921554198600C48777 /* UNIItem.m */; };
+		BA150AD11556BDB4009C84E2 /* UNIItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA150AD01556BDB4009C84E2 /* UNIItemViewController.m */; };
+		BAAAA899155AF96600119D41 /* UNIAsyncImage.m in Sources */ = {isa = PBXBuildFile; fileRef = BAAAA898155AF96600119D41 /* UNIAsyncImage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,21 +26,23 @@
 		BA0E1D6215540F7000C48777 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BA0E1D6415540F7000C48777 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BA0E1D6615540F7000C48777 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		BA0E1D6A15540F7000C48777 /* storefront-ios-Info.plist */ = {isa = PBXFileReference; path = "storefront-ios-Info.plist"; sourceTree = "<group>"; };
+		BA0E1D6A15540F7000C48777 /* storefront-ios-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "storefront-ios-Info.plist"; sourceTree = "<group>"; };
 		BA0E1D6C15540F7000C48777 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BA0E1D6E15540F7000C48777 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		BA0E1D7015540F7000C48777 /* storefront-ios-Prefix.pch */ = {isa = PBXFileReference; path = "storefront-ios-Prefix.pch"; sourceTree = "<group>"; };
-		BA0E1D7115540F7000C48777 /* UNIAppDelegate.h */ = {isa = PBXFileReference; path = UNIAppDelegate.h; sourceTree = "<group>"; };
+		BA0E1D7015540F7000C48777 /* storefront-ios-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "storefront-ios-Prefix.pch"; sourceTree = "<group>"; };
+		BA0E1D7115540F7000C48777 /* UNIAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UNIAppDelegate.h; sourceTree = "<group>"; };
 		BA0E1D7215540F7000C48777 /* UNIAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UNIAppDelegate.m; sourceTree = "<group>"; };
 		BA0E1D7515540F7000C48777 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		BA0E1D7715540F7000C48777 /* UNIFirstViewController.h */ = {isa = PBXFileReference; path = UNIFirstViewController.h; sourceTree = "<group>"; };
-		BA0E1D7815540F7000C48777 /* UNIFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UNIFirstViewController.m; sourceTree = "<group>"; };
-		BA0E1D7A15540F7000C48777 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
-		BA0E1D7C15540F7000C48777 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		BA0E1D7E15540F7000C48777 /* UNISecondViewController.h */ = {isa = PBXFileReference; path = UNISecondViewController.h; sourceTree = "<group>"; };
-		BA0E1D7F15540F7000C48777 /* UNISecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UNISecondViewController.m; sourceTree = "<group>"; };
-		BA0E1D8115540F7000C48777 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
-		BA0E1D8315540F7000C48777 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		BA0E1D8A1554102500C48777 /* UNIBootsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNIBootsViewController.h; sourceTree = "<group>"; };
+		BA0E1D8B1554102500C48777 /* UNIBootsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNIBootsViewController.m; sourceTree = "<group>"; };
+		BA0E1D8F1554198600C48777 /* Products.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Products.h; path = "../../Unisport-iOs/Unisport-iOs/Products.h"; sourceTree = "<group>"; };
+		BA0E1D901554198600C48777 /* Products.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Products.m; path = "../../Unisport-iOs/Unisport-iOs/Products.m"; sourceTree = "<group>"; };
+		BA0E1D911554198600C48777 /* UNIItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UNIItem.h; path = "../../Unisport-iOs/Unisport-iOs/UNIItem.h"; sourceTree = "<group>"; };
+		BA0E1D921554198600C48777 /* UNIItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UNIItem.m; path = "../../Unisport-iOs/Unisport-iOs/UNIItem.m"; sourceTree = "<group>"; };
+		BA150ACF1556BDB4009C84E2 /* UNIItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNIItemViewController.h; sourceTree = "<group>"; };
+		BA150AD01556BDB4009C84E2 /* UNIItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNIItemViewController.m; sourceTree = "<group>"; };
+		BAAAA897155AF96600119D41 /* UNIAsyncImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNIAsyncImage.h; sourceTree = "<group>"; };
+		BAAAA898155AF96600119D41 /* UNIAsyncImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNIAsyncImage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,15 +91,17 @@
 			children = (
 				BA0E1D7115540F7000C48777 /* UNIAppDelegate.h */,
 				BA0E1D7215540F7000C48777 /* UNIAppDelegate.m */,
+				BA0E1D8A1554102500C48777 /* UNIBootsViewController.h */,
+				BA0E1D8B1554102500C48777 /* UNIBootsViewController.m */,
 				BA0E1D7415540F7000C48777 /* MainStoryboard.storyboard */,
-				BA0E1D7715540F7000C48777 /* UNIFirstViewController.h */,
-				BA0E1D7815540F7000C48777 /* UNIFirstViewController.m */,
-				BA0E1D7A15540F7000C48777 /* first.png */,
-				BA0E1D7C15540F7000C48777 /* first@2x.png */,
-				BA0E1D7E15540F7000C48777 /* UNISecondViewController.h */,
-				BA0E1D7F15540F7000C48777 /* UNISecondViewController.m */,
-				BA0E1D8115540F7000C48777 /* second.png */,
-				BA0E1D8315540F7000C48777 /* second@2x.png */,
+				BAAAA897155AF96600119D41 /* UNIAsyncImage.h */,
+				BAAAA898155AF96600119D41 /* UNIAsyncImage.m */,
+				BA150ACF1556BDB4009C84E2 /* UNIItemViewController.h */,
+				BA150AD01556BDB4009C84E2 /* UNIItemViewController.m */,
+				BA0E1D8F1554198600C48777 /* Products.h */,
+				BA0E1D901554198600C48777 /* Products.m */,
+				BA0E1D911554198600C48777 /* UNIItem.h */,
+				BA0E1D921554198600C48777 /* UNIItem.m */,
 				BA0E1D6915540F7000C48777 /* Supporting Files */,
 			);
 			path = "storefront-ios";
@@ -168,10 +171,6 @@
 			files = (
 				BA0E1D6D15540F7000C48777 /* InfoPlist.strings in Resources */,
 				BA0E1D7615540F7000C48777 /* MainStoryboard.storyboard in Resources */,
-				BA0E1D7B15540F7000C48777 /* first.png in Resources */,
-				BA0E1D7D15540F7000C48777 /* first@2x.png in Resources */,
-				BA0E1D8215540F7000C48777 /* second.png in Resources */,
-				BA0E1D8415540F7000C48777 /* second@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,8 +183,11 @@
 			files = (
 				BA0E1D6F15540F7000C48777 /* main.m in Sources */,
 				BA0E1D7315540F7000C48777 /* UNIAppDelegate.m in Sources */,
-				BA0E1D7915540F7000C48777 /* UNIFirstViewController.m in Sources */,
-				BA0E1D8015540F7000C48777 /* UNISecondViewController.m in Sources */,
+				BA0E1D8C1554102500C48777 /* UNIBootsViewController.m in Sources */,
+				BA0E1D931554198600C48777 /* Products.m in Sources */,
+				BA0E1D941554198600C48777 /* UNIItem.m in Sources */,
+				BA150AD11556BDB4009C84E2 /* UNIItemViewController.m in Sources */,
+				BAAAA899155AF96600119D41 /* UNIAsyncImage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +299,7 @@
 				BA0E1D8915540F7000C48777 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
