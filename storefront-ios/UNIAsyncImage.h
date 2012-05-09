@@ -24,8 +24,8 @@
 
 @property (strong, nonatomic) id delegate;
 @property (weak, nonatomic) UIImage *img;
-@property (weak, nonatomic) NSIndexPath *path;
--(void)ImageWithUri:(NSURL *)uri withIndexPath:(NSIndexPath *)indexPath;
+@property (weak, nonatomic) UIImageView *imView;
+-(void)ImageWithUri:(NSURL *)uri atThisView:(UIImageView *)imgView;
 
 
 

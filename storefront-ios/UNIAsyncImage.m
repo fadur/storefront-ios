@@ -11,24 +11,24 @@
 @implementation UNIAsyncImage
 @synthesize delegate;
 @synthesize img;
-@synthesize path = _path;
+@synthesize imView;
 
 -(id)init{
     self = [super init];
     if (self) {
-        self.path = [[NSIndexPath alloc] init];
+        //_path = [[NSIndexPath alloc] init];
     }
     
     return self;
 }
 
 
--(void)ImageWithUri:(NSURL *)uri withIndexPath:(NSIndexPath *)indexPath{
+-(void)ImageWithUri:(NSURL *)uri atThisView:(UIImageView *)imgView{
     
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:uri];
     connect = [[NSURLConnection alloc] initWithRequest:request  delegate:self];
     [connect start];
-    _path = indexPath;
+    self.imView = imgView; 
     
     
 
@@ -43,7 +43,6 @@
 -(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data{
     UIImage *payLoadimg = [[UIImage alloc] initWithData:data];
     self.img = payLoadimg;
-    NSLog(@"%@", _path);
     [self processImageLoaded:YES];
 
 }

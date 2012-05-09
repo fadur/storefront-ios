@@ -46,12 +46,7 @@
 }
 
 -(void)processImageLoaded:(BOOL)success{
-    NSLog(@"%@", async.path);
-    img = async.img;
-    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:async.path];
-    UIImageView *image = (UIImageView *)[cell viewWithTag:101];
-    [image setImage:img];
-    
+    [async.imView setImage: async.img];
 
 }
 
@@ -93,8 +88,9 @@
     }
     if (objects.count != 0) {
         productItem = [[UNIItem alloc] initWithDict: [objects objectAtIndex:[indexPath row]]];
-        [async ImageWithUri:productItem.productImage withIndexPath:indexPath];
+        
         UIImageView *image = (UIImageView *)[cell viewWithTag:101];
+        [async ImageWithUri:productItem.productImage atThisView:image];
         UILabel *name = (UILabel *)[cell viewWithTag:100];
         name.text = productItem.productName;
         [image setImage: nil];
