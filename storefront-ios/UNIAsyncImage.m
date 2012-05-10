@@ -11,7 +11,6 @@
 @implementation UNIAsyncImage
 @synthesize delegate;
 @synthesize img;
-@synthesize imView;
 
 -(id)init{
     self = [super init];
@@ -23,12 +22,12 @@
 }
 
 
--(void)ImageWithUri:(NSURL *)uri atThisView:(UIImageView *)imgView{
+-(void)ImageWithUri:(NSURL *)uri {
     
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:uri];
     connect = [[NSURLConnection alloc] initWithRequest:request  delegate:self];
     [connect start];
-    self.imView = imgView; 
+
     
     
 
@@ -42,8 +41,13 @@
 
 -(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data{
     UIImage *payLoadimg = [[UIImage alloc] initWithData:data];
-    self.img = payLoadimg;
-    [self processImageLoaded:YES];
+    
+    if (payLoadimg != NULL) {
+            self.img = payLoadimg;
+            [self processImageLoaded:YES];
+    }
+    
+    
 
 }
 

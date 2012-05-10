@@ -14,10 +14,7 @@
 
 @synthesize table = _table;
 
--(void)awakeFromNib{
-    [super awakeFromNib];
 
-}
 -(id)init{
     self = [super init];
     if (self = [super init]) {
@@ -35,18 +32,16 @@
     [storefront setDelegate:self];
 
 }
+-(void)processImageComplete:(BOOL)suceess{
+    NSLog(@"item complete");
+    NSLog(@"%@", productItem.Image);
+    img = productItem.Image;
+}
 
 -(void)processSuccessful:(BOOL)success{
     objects = storefront.productItems;
     [_table reloadData];
-    async = [[UNIAsyncImage alloc] init];
-    [async setDelegate:self];
 
-
-}
-
--(void)processImageLoaded:(BOOL)success{
-    [async.imView setImage: async.img];
 
 }
 
@@ -78,6 +73,13 @@
     }
 }
 
+-(UIImageView *)updateImgView:(UIImageView *)imgView{
+
+    return  imgView;
+    
+    
+
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -88,14 +90,19 @@
     }
     if (objects.count != 0) {
         productItem = [[UNIItem alloc] initWithDict: [objects objectAtIndex:[indexPath row]]];
-        
+        [productItem setDelegate:self];
         UIImageView *image = (UIImageView *)[cell viewWithTag:101];
-        [async ImageWithUri:productItem.productImage atThisView:image];
+      
         UILabel *name = (UILabel *)[cell viewWithTag:100];
         name.text = productItem.productName;
-        [image setImage: nil];
+        if (img ==NULL) {
+            [self updateImgView:image];
+        } else {
+            [image setImage:img];
+        }
         
         
+            
         NSString *lorem = [[NSString alloc] initWithString:@"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis urna arcu. Duis quis ipsum augue. Duis erat arcu, venenatis eu tempus vehicula, imperdiet elementum nisi. Morbi ipsum leo, vulputate non tincidunt scelerisque, venenatis non odio. Morbi iaculis lobortis nulla ac porta."];
         UILabel *text = (UILabel *)[cell viewWithTag:102];
         text.text = lorem;

@@ -9,17 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "Products.h"
 #import "UNIItem.h"
-#import "UNIAsyncImage.h"
 
-@interface UNIBootsViewController : UITableViewController <PayloadComplete, ImageLoaded, UITableViewDelegate, UITableViewDataSource>
+@interface UNIBootsViewController : UITableViewController <PayloadComplete, ItemComplete, UITableViewDelegate, UITableViewDataSource>
 {
 
     NSMutableArray *objects;
     Products *storefront;
     UNIItem *productItem;
-    UNIAsyncImage *async;
     UIImage *img;
-    NSIndexPath *path;
 }
 
 

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12C2379B155BB9B500B757C4 /* Products.m in Sources */ = {isa = PBXBuildFile; fileRef = 12C23798155BB9B500B757C4 /* Products.m */; };
+		12C2379C155BB9B500B757C4 /* UNIItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 12C2379A155BB9B500B757C4 /* UNIItem.m */; };
 		BA0E1D6315540F7000C48777 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA0E1D6215540F7000C48777 /* UIKit.framework */; };
 		BA0E1D6515540F7000C48777 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA0E1D6415540F7000C48777 /* Foundation.framework */; };
 		BA0E1D6715540F7000C48777 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA0E1D6615540F7000C48777 /* CoreGraphics.framework */; };
@@ -15,13 +17,15 @@
 		BA0E1D7315540F7000C48777 /* UNIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0E1D7215540F7000C48777 /* UNIAppDelegate.m */; };
 		BA0E1D7615540F7000C48777 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA0E1D7415540F7000C48777 /* MainStoryboard.storyboard */; };
 		BA0E1D8C1554102500C48777 /* UNIBootsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0E1D8B1554102500C48777 /* UNIBootsViewController.m */; };
-		BA0E1D931554198600C48777 /* Products.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0E1D901554198600C48777 /* Products.m */; };
-		BA0E1D941554198600C48777 /* UNIItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0E1D921554198600C48777 /* UNIItem.m */; };
 		BA150AD11556BDB4009C84E2 /* UNIItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA150AD01556BDB4009C84E2 /* UNIItemViewController.m */; };
 		BAAAA899155AF96600119D41 /* UNIAsyncImage.m in Sources */ = {isa = PBXBuildFile; fileRef = BAAAA898155AF96600119D41 /* UNIAsyncImage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		12C23797155BB9B500B757C4 /* Products.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Products.h; sourceTree = "<group>"; };
+		12C23798155BB9B500B757C4 /* Products.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Products.m; sourceTree = "<group>"; };
+		12C23799155BB9B500B757C4 /* UNIItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNIItem.h; sourceTree = "<group>"; };
+		12C2379A155BB9B500B757C4 /* UNIItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNIItem.m; sourceTree = "<group>"; };
 		BA0E1D5E15540F7000C48777 /* storefront-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "storefront-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA0E1D6215540F7000C48777 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BA0E1D6415540F7000C48777 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -35,10 +39,6 @@
 		BA0E1D7515540F7000C48777 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		BA0E1D8A1554102500C48777 /* UNIBootsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNIBootsViewController.h; sourceTree = "<group>"; };
 		BA0E1D8B1554102500C48777 /* UNIBootsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNIBootsViewController.m; sourceTree = "<group>"; };
-		BA0E1D8F1554198600C48777 /* Products.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Products.h; path = "../../Unisport-iOs/Unisport-iOs/Products.h"; sourceTree = "<group>"; };
-		BA0E1D901554198600C48777 /* Products.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Products.m; path = "../../Unisport-iOs/Unisport-iOs/Products.m"; sourceTree = "<group>"; };
-		BA0E1D911554198600C48777 /* UNIItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UNIItem.h; path = "../../Unisport-iOs/Unisport-iOs/UNIItem.h"; sourceTree = "<group>"; };
-		BA0E1D921554198600C48777 /* UNIItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UNIItem.m; path = "../../Unisport-iOs/Unisport-iOs/UNIItem.m"; sourceTree = "<group>"; };
 		BA150ACF1556BDB4009C84E2 /* UNIItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNIItemViewController.h; sourceTree = "<group>"; };
 		BA150AD01556BDB4009C84E2 /* UNIItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNIItemViewController.m; sourceTree = "<group>"; };
 		BAAAA897155AF96600119D41 /* UNIAsyncImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNIAsyncImage.h; sourceTree = "<group>"; };
@@ -89,6 +89,10 @@
 		BA0E1D6815540F7000C48777 /* storefront-ios */ = {
 			isa = PBXGroup;
 			children = (
+				12C23797155BB9B500B757C4 /* Products.h */,
+				12C23798155BB9B500B757C4 /* Products.m */,
+				12C23799155BB9B500B757C4 /* UNIItem.h */,
+				12C2379A155BB9B500B757C4 /* UNIItem.m */,
 				BA0E1D7115540F7000C48777 /* UNIAppDelegate.h */,
 				BA0E1D7215540F7000C48777 /* UNIAppDelegate.m */,
 				BA0E1D8A1554102500C48777 /* UNIBootsViewController.h */,
@@ -98,10 +102,6 @@
 				BAAAA898155AF96600119D41 /* UNIAsyncImage.m */,
 				BA150ACF1556BDB4009C84E2 /* UNIItemViewController.h */,
 				BA150AD01556BDB4009C84E2 /* UNIItemViewController.m */,
-				BA0E1D8F1554198600C48777 /* Products.h */,
-				BA0E1D901554198600C48777 /* Products.m */,
-				BA0E1D911554198600C48777 /* UNIItem.h */,
-				BA0E1D921554198600C48777 /* UNIItem.m */,
 				BA0E1D6915540F7000C48777 /* Supporting Files */,
 			);
 			path = "storefront-ios";
@@ -184,10 +184,10 @@
 				BA0E1D6F15540F7000C48777 /* main.m in Sources */,
 				BA0E1D7315540F7000C48777 /* UNIAppDelegate.m in Sources */,
 				BA0E1D8C1554102500C48777 /* UNIBootsViewController.m in Sources */,
-				BA0E1D931554198600C48777 /* Products.m in Sources */,
-				BA0E1D941554198600C48777 /* UNIItem.m in Sources */,
 				BA150AD11556BDB4009C84E2 /* UNIItemViewController.m in Sources */,
 				BAAAA899155AF96600119D41 /* UNIAsyncImage.m in Sources */,
+				12C2379B155BB9B500B757C4 /* Products.m in Sources */,
+				12C2379C155BB9B500B757C4 /* UNIItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
