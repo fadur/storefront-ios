@@ -23,7 +23,7 @@
 
 
 -(void)ImageWithUri:(NSURL *)uri {
-    
+
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:uri];
     connect = [[NSURLConnection alloc] initWithRequest:request  delegate:self];
     [connect start];
@@ -40,13 +40,13 @@
 }
 
 -(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data{
-    UIImage *payLoadimg = [[UIImage alloc] initWithData:data];
-    
-    if (payLoadimg != NULL) {
-            self.img = payLoadimg;
-            [self processImageLoaded:YES];
-    }
-    
+    NSData *d = [[NSData alloc] initWithData:data];
+    UIImage *payLoadimg = [[UIImage alloc] initWithData:d];
+    //if (payLoadimg != NULL) {
+           // self.img = payLoadimg;
+           // [self processImageLoaded:YES];
+    //}
+    NSLog(@"%@", payLoadimg);
     
 
 }

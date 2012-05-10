@@ -33,15 +33,19 @@
 
 }
 -(void)processImageComplete:(BOOL)suceess{
-    NSLog(@"item complete");
-    NSLog(@"%@", productItem.Image);
-    img = productItem.Image;
+    
+    [_table reloadData];
+
 }
 
 -(void)processSuccessful:(BOOL)success{
-    objects = storefront.productItems;
-    [_table reloadData];
-
+    for (NSDictionary *obj in storefront.productItems) {
+        productItem = [[UNIItem alloc] initWithDict:obj];
+        [objects addObject:productItem];
+        [productItem setDelegate:self];
+    }
+    
+   
 
 }
 
@@ -73,13 +77,6 @@
     }
 }
 
--(UIImageView *)updateImgView:(UIImageView *)imgView{
-
-    return  imgView;
-    
-    
-
-}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -89,18 +86,13 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
     }
     if (objects.count != 0) {
-        productItem = [[UNIItem alloc] initWithDict: [objects objectAtIndex:[indexPath row]]];
-        [productItem setDelegate:self];
-        UIImageView *image = (UIImageView *)[cell viewWithTag:101];
+        productItem = [objects objectAtIndex:[indexPath row]];
+        //UIImageView *image = (UIImageView *)[cell viewWithTag:101];
       
         UILabel *name = (UILabel *)[cell viewWithTag:100];
         name.text = productItem.productName;
-        if (img ==NULL) {
-            [self updateImgView:image];
-        } else {
-            [image setImage:img];
-        }
-        
+        //[image setImage: productItem.Image];
+      
         
             
         NSString *lorem = [[NSString alloc] initWithString:@"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis urna arcu. Duis quis ipsum augue. Duis erat arcu, venenatis eu tempus vehicula, imperdiet elementum nisi. Morbi ipsum leo, vulputate non tincidunt scelerisque, venenatis non odio. Morbi iaculis lobortis nulla ac porta."];
@@ -129,10 +121,6 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
   
-   //[self performSegueWithIdentifier:@"ShowDetail" sender:self];
-    
-    //[self prepare
-        
     
 }
 

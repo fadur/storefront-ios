@@ -18,8 +18,7 @@
     self = [super init];
     if (self) {
         async = [[UNIAsyncImage alloc] init];
-        UIImageView *imgView = [[UIImageView alloc] init];
-        [imgView setImage:nil];
+       
         [async setDelegate:self];
         [self setProductId:[obj objectForKey:@"id"]];
         [self setProductName:[obj objectForKey:@"name"]];
@@ -33,8 +32,9 @@
 }
 -(void)processImageLoaded:(BOOL)success{
     if (async.img != NULL) {
-        [self setImage: async.img];
-        [self processImageComplete:YES];
+        //NSLog(@"%@", async.img);
+        //[self setImage: async.img];
+        //[self processImageComplete:YES];
     }
     
 }
@@ -50,6 +50,7 @@
     NSString *extension = [[NSString alloc] initWithString:@"_maxi_0.jpg"];
     NSString *uri = [[NSString alloc] initWithFormat:@"%@%@%@",src, productId, extension];
     NSURL *url = [NSURL URLWithString:uri];
+    //NSLog(@"%@", uri);
     [async ImageWithUri:url];
     
     
