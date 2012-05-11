@@ -7,16 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "UNIAsyncImage.h"
 
-@protocol ItemComplete <NSObject>
 
-@required
--(void)processImageComplete:(BOOL)suceess;
-
-@end
-
-@interface UNIItem : NSObject <ImageLoaded>
+@interface UNIItem : NSObject
 {
     NSString *productId;
     NSString *productName;
@@ -24,8 +17,8 @@
     NSString *expectedDelivery;
     NSArray *availableSizes;
     UIImage *img;
-    UNIAsyncImage *async;
-    id <ItemComplete> delegate;
+  
+    NSURL *imgUrl;
 }
 
 @property (nonatomic, copy) NSString *productId;
@@ -35,7 +28,6 @@
 @property (nonatomic, copy) NSString *expectedDelivery;
 @property (nonatomic, copy) NSArray *availableSizes;
 @property (nonatomic, copy) UIImage *Image;
-@property (strong, nonatomic) id delegate;
 
 -(id)initWithDict:(NSDictionary *)obj;
 -(void)productImage;

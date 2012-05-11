@@ -10,7 +10,7 @@
 #import "Products.h"
 #import "UNIItem.h"
 
-@interface UNIBootsViewController : UITableViewController <PayloadComplete, ItemComplete, UITableViewDelegate, UITableViewDataSource>
+@interface UNIBootsViewController : UITableViewController <PayloadComplete, UITableViewDelegate, UITableViewDataSource>
 {
 
     NSMutableArray *objects;

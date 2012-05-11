@@ -14,11 +14,9 @@
 
 @synthesize table = _table;
 
-
 -(id)init{
     self = [super init];
     if (self = [super init]) {
-        objects = [[NSMutableArray alloc] init];
        }
         
     return self;
@@ -32,20 +30,20 @@
     [storefront setDelegate:self];
 
 }
--(void)processImageComplete:(BOOL)suceess{
-    
-    [_table reloadData];
-
-}
 
 -(void)processSuccessful:(BOOL)success{
+    objects = [[NSMutableArray alloc] init];
+
     for (NSDictionary *obj in storefront.productItems) {
         productItem = [[UNIItem alloc] initWithDict:obj];
+        //[objects addObject:productItem];
         [objects addObject:productItem];
-        [productItem setDelegate:self];
+
     }
-    
-   
+
+
+    [self.table reloadData];
+
 
 }
 
@@ -68,30 +66,31 @@
 
 #pragma mark - Table view data source
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-
     if (objects.count != 0) {
         return objects.count;
+
     } else{
         return 1;
         
     }
 }
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 125;
 
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
-    }
+   
     if (objects.count != 0) {
         productItem = [objects objectAtIndex:[indexPath row]];
-        //UIImageView *image = (UIImageView *)[cell viewWithTag:101];
+        UIImageView *image = (UIImageView *)[cell viewWithTag:101];
       
         UILabel *name = (UILabel *)[cell viewWithTag:100];
         name.text = productItem.productName;
-        //[image setImage: productItem.Image];
+        [image setImage: productItem.Image];
       
         
             
@@ -114,7 +113,7 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([segue.identifier isEqualToString:@"ShowDetail"]) {
          NSIndexPath *this = [_table indexPathForSelectedRow];
-        UNIItem *item = [[UNIItem alloc] initWithDict:[objects objectAtIndex:[this row]]];
+        UNIItem *item = [objects objectAtIndex:[this row]];
         [segue.destinationViewController setThisItem: item];
     }
 }
