@@ -8,12 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import "UNIItem.h"
-@interface UNIItemViewController : UIViewController
+#import "UNIAsyncImage.h"
+@interface UNIItemViewController : UIViewController <ImageLoaded>
 {
+    UNIAsyncImage *async;
 }
 
 
 @property (nonatomic) UNIItem *thisItem;
 -(id)initWithItem:(UNIItem *)item;
+@property (weak, nonatomic) IBOutlet UIImageView *image;
+@property (weak, nonatomic) IBOutlet UILabel *name;
 
 @end

@@ -18,12 +18,11 @@
 
 {
     id <ImageLoaded> delegate;
-    NSURLConnection *connect;
 
 }
 
 @property (strong, nonatomic) id delegate;
-@property (weak, nonatomic) UIImage *img;
+@property (strong, nonatomic) UIImage *img;
 -(void)ImageWithUri:(NSURL *)uri;
 
 

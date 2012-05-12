@@ -15,7 +15,7 @@
 -(id)init{
     self = [super init];
     if (self) {
-        //_path = [[NSIndexPath alloc] init];
+        
     }
     
     return self;
@@ -23,36 +23,17 @@
 
 
 -(void)ImageWithUri:(NSURL *)uri {
-
-    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:uri];
-    connect = [[NSURLConnection alloc] initWithRequest:request  delegate:self];
-    [connect start];
-
-    
+    NSData *data = [[NSData alloc] initWithContentsOfURL:uri];
+    img = [[UIImage alloc] initWithData:data];
+    [self setImg: img];
+    [self processImageLoaded];
     
 
 }
 
--(void)processImageLoaded:(BOOL)success{
+-(void)processImageLoaded{
     [[self delegate] processImageLoaded:YES];
     
 
-}
-
--(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data{
-    NSData *d = [[NSData alloc] initWithData:data];
-    UIImage *payLoadimg = [[UIImage alloc] initWithData:d];
-    //if (payLoadimg != NULL) {
-           // self.img = payLoadimg;
-           // [self processImageLoaded:YES];
-    //}
-    NSLog(@"%@", payLoadimg);
-    
-
-}
-
--(void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error{
-    NSLog(@"%@", error);
-    
 }
 @end

@@ -37,7 +37,7 @@
 -(void)productImage{
 
     NSString *src = [[NSString alloc] initWithString:@"http://s3-eu-west-1.amazonaws.com/product-img/"];
-    NSString *extension = [[NSString alloc] initWithString:@"_storefront_0.jpg"];
+    NSString *extension = [[NSString alloc] initWithString:@"_mellem.jpg"];
     NSString *uri = [[NSString alloc] initWithFormat:@"%@%@%@",src, productId, extension];
     NSURL *url = [NSURL URLWithString:uri];
     imgUrl = url;
